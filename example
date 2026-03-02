@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zoom - Fashion Photography Agency</title> 
+    <style>
+        * {
+            font-weight: bold;
+        }
+        input[type="tel"], input[type="email"], input[type="number"], input[type="text"], input[type="week"], input[type="time"] {
+            background-color: transparent;   
+            width: 97%;
+        }
+        select {
+            background-color: transparent;   
+            width: 99%;
+        }
+        
+        body {
+            background-color: #4D4D4D;
+            margin-top: 4%;
+        }
+        h3 {
+            color: #FFFFFF;
+            font-family: Verdana;
+            background-color: #D1B000;
+            text-align: center;
+            text-shadow: 1px 2px #000000;
+        }
+        table {
+            border: solid 2px;
+            background-color: transparent;
+            border-spacing: 1px;
+        }
+        div {
+            background-image: url('PIXELS.jpg');
+            border: 20px solid #969696;
+            width: 52%;
+            margin-left: 24%;
+            margin-right: auto;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        #quote, button {
+            font-family: Verdana;
+            color: #FFFFFF;
+            background-color: #D1B000;
+        }
+        caption {
+            text-align: left;
+            color: #FFFFFF;
+        }
+        
+        h3, table, #quote {
+            width: 52%; 
+            margin-right: auto;
+            border-radius: 6px;
+            padding: 5px;
+            margin-left: 24%;
+        }
+        .hidden {
+            display: none;
+        }
+        #others:checked + .hidden {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" autocomplete="off" novalidate>
+        <h3>Zoom - Fashion Photography Agency</h3>
+        
+        <div id="section1">
+            <table id="table1">
+                <caption><strong>Personal Details</strong></caption>
+                <tr>
+                    <td>
+                        Customer Name<br>
+                        <input type="text" id="cname" name="cname" pattern="[A-Za-z\s]+" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Specify Gender<br>
+                        <input type="radio" id="male" name="gender" value="Male"> Male
+                        <input type="radio" id="female" name="gender" value="Female"> Female
+                        <input type="radio" id="others" name="gender" value="Others"> Others
+                        <input type="text" id="specify" name="gender" class="hidden" placeholder="Please, specify">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Age<br>
+                        <input type="number" id="age" name="age" min="18" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone Number<br>
+                        <input type="tel" id="phno" name="phno" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email ID<br>
+                        <input type="email" id="email" name="email" required>
+                    </td>
+                </tr>
+            </table>
+        </div><br/>
+        
+        <div id="section2">
+            <table id="table2">
+                <caption><strong>Shoot Details</strong></caption>
+                <tr>
+                    <td>
+                        Shoot Week Preferred<br>
+                        <input type="week" id="week" name="week" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Changes / No of Days<br>
+                        <select id="changes" name="changes">
+                            <option value=""></option>
+                            <option value="3 Changes / 1 Day">3 Changes / 1 Day</option>
+                            <option value="6 Changes / 2 Days">6 Changes / 2 Days</option>
+                            <option value="8 Changes / 3 Days">8 Changes / 3 Days</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Shoot Duration Preferred (in hours - per day)<br>
+                        <input type="time" id="duration" name="duration" min="09:00" max="17:00" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        No. of Enhanced Photographs required<br>
+                        <input type="number" id="edited_pics" name="edited_pics" min="10" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td name="check"><input type="checkbox" id="unedited_pics" name="unedited_pics"> I require a CD with 100+ unedited photographs.</td>
+                </tr>
+                <tr>
+                    <td name="check"><input type="checkbox" id="comp_cards" name="comp_cards" title="a pack of 10 by default"> I require the printed version of the comp card.</td>
+                </tr>
+                <tr>
+                    <td name="check">Drop a pic in png format.<input type="file" id="pic" name="pic" accept="image/png" class="hidden" required><button type="button" id="upload"><label for="pic">Upload</label></button></td>
+                </tr>
+            </table>
+        </div><br/>
+
+        <input type="button" id="quote" value="BOOK SLOT">
+        <br/><br/>
+    </form>
+</body>
+</html>
